@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient( #4facfe 0%, #00f2fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: background 5s infinite ease;
+    overflow: hidden;
+    
+}
+
+@keyframes background {
+
+    0% {
+        background-image: radial-gradient( #4facfe 0%, #00f2fe 100%);
+
+    }
+    25% {
+        background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    50% {
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    }
+
+    100% {
+        background-image: radial-gradient( #4facfe 0%, #00f2fe 100%);
+
+    }
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    animation: spacin 3s infinite ease-in-out;
+    scale: 1;
+    transition: all .2s;
+}
+
+@keyframes spacin {
+    25% {
+        letter-spacing: 2px;
+        color: #f093fb;
+    }
+
+    50% {
+        letter-spacing: 2px;
+        color: #e600ff;
+        transform: scale(1.5);
+    }
+}
+
+.cumple {
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    background-image: url(./Mexico.jpg);
+    background-size: cover;
+    box-shadow: inset 0 0 20px black,
+                inset -40px -10px 20px rgba(0, 0, 0, 0.377);
+                animation: mexico 5s linear infinite;
+                z-index: 1;
+}
+
+@keyframes mexico {
+    0%{
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -700px;
+    }
+    
+}
+
+img {
+    width:100px;
+    animation: flotantes 5s infinite ease-in-out;
+    transform: scale(1);
+    transition: all .3s;
+    
+}
+
+.--modify {
+    position:relative;
+    left: 500px;
+}
+
+.--modify2 {
+    position:relative;
+    left: -500px;
+}
+
+.--modif3 {
+    position:relative;
+    left: 300px;
+}
+
+.--modif4 {
+    position:relative;
+    right: 400px;
+}
+
+.--modif5 {
+    position:relative;
+    right: -400px;
+}
+
+@keyframes flotantes {
+    0%{
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-500%);
+        
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+
+}
